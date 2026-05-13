@@ -9,16 +9,52 @@
     
 
     <script>
+
+        //First for loop
         for(let i =0; i < 10; i++)
     {
         console.log(i)
     }
 
+    //Second for loop
     var amountToLoop = 25
     for(let i = 0; i < amountToLoop; i+=2)
     {
         console.log(i)
     }
+
+    //Making an object
+    var person = {
+        first: "Joel",
+        last: "Hanson"
+    }
+
+    console.log(person.first)
+    console.log(person.last)
+
+    //Changing the values of objects
+    person.first = "Charlie!"
+
+    console.log(person.first)
+
+    var car = {
+        wheels: 26,
+        doors: 8,
+        make: "Subaru",
+        hasEngine: false,
+        window: 1,
+        drive : function () {
+            console.log("Vroom Vroom")
+        }
+    }
+
+    //Calling a function that's inside a object
+    car.drive()
+
+    //Changing the make
+    car.make = "Honda"
+    console.log(car.make)
     </script>
+    
 </body>
 </html>
