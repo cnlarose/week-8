@@ -7,6 +7,15 @@
 </head>
 <body>
     
+    <div id="movieContainer">
+        <h2>I like these movies:</h2>
+
+        <ul id="movies">
+
+
+        </ul>
+
+    </div>
 
     <script>
 
@@ -54,6 +63,75 @@
     //Changing the make
     car.make = "Honda"
     console.log(car.make)
+
+
+    var people=[
+        "Miller",
+        "Charles",
+        "Justin",
+        "Molly",
+        "Jeremiah"
+    ]
+
+    //Logging out a value
+    console.log(people[2])
+
+    //Adding an element via push
+    people.push("Chris")
+
+    //Re logging out element 5
+    console.log(people[5])
+
+    //Adding a value ahead of where it should be
+    people[7] = "Joel"
+    console.log(people[7])
+
+    //Pop removes the last element of an array and allows you to store it in a variable
+    var namePopped = people.pop()
+
+    //Logging out that variable
+    console.log(namePopped + " was popped")
+
+    //Showing that "Joel" no longer exists in the array
+    console.log(people[7])
+
+    //Another way of removing something
+    people[3] = null
+
+
+    var movies = [
+        "Happy Gilmore",
+        "Howls Moving Castle",
+        "Dodgeball",
+        "Mortal Kombat 2",
+        "The Polar Express",
+        "Porco Rosso",
+        "Chainsaw Man Reze Arc"
+    ]
+
+    for(let i = 0; i < movies.length; i++)
+    {
+        console.log(movies[i])
+    }
+
+    //Complex Examples
+
+    var movieList = document.querySelector("#movies")
+
+    for(let i = 0; i < movies.length; i++)
+    {
+        movieList.innerHTML += "<li>" + movies[i] + "</li>"
+    }
+
+//A for in loop
+
+    //This is going to loop through all the keys in our car object
+    for(let objectKey in car)
+    {
+        //We can then access that value of the key with []
+        console.log(car[objectKey])
+    }
+
     </script>
     
 </body>
